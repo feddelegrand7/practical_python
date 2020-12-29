@@ -111,6 +111,40 @@ You can also use `tuple`s for something called unpacking. Let's see it in action
 3.5
 ```
 
+You can ignore a value using a double underscore (`__`).
+
+```python
+>>> student = ("Marcy", 8, "History", 3.5)
+>>>
+>>> name, age, __, grade = student
+>>> name
+'Marcy'
+>>> age
+8
+>>> grade
+3.5
+```
+
+You can also assign multiple values into one variable when unpacking. 
+
+```python
+>>> student = ("Marcy", 8, "History", 3.5)
+
+>>> name, *other = student
+>>> name
+'Marcy'
+>>> other
+[8, 'History', 3.5]
+```
+
+```python
+>>> student = ("Marcy", 8, "History", 3.5)
+
+>>> name, *middle, grade = student
+>>> middle
+[8, 'History']
+```
+
 You can return tuples from functions, and use unpacking to get the values back.
 
 ```python
@@ -123,3 +157,4 @@ You can return tuples from functions, and use unpacking to get the values back.
 >>> value
 'OK'
 ```
+
